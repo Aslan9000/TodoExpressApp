@@ -18,6 +18,7 @@ let connectionString = 'mongodb+srv://todoAppUser:dbUserPassword@cluster0.fjlay.
 mongodb.connect(connectionString, {useNewUrlParser: true, useUnifiedTopology: true}, function(err, client){
     db = client.db()
     app.listen(port)
+    console.log(err)
 })
 
 app.use(express.json())
